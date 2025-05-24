@@ -3,110 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simplify 2.0 – Chrome Extension</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <title>Simplify Extension</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #8bc6ec, #9599e2);
-      color: white;
-      padding: 3rem 1rem;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #111827, #1f2937);
+      color: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .feature {
-      background: white;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .cta a {
-      display: inline-block;
-      background: #4caf50;
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    .cta a:hover {
-      background: #45a049;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
       padding: 2rem;
-      color: #777;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      color: #10b981;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #d1d5db;
+    }
+
+    .cta {
+      background-color: #10b981;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 10px;
+      color: #111827;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    }
+
+    .cta:hover {
+      background-color: #059669;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 4rem;
+      max-width: 1000px;
+    }
+
+    .feature {
+      background-color: #1f2937;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #374151;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .feature h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #fbbf24;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+    }
+
+    footer {
+      margin-top: 5rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Simplify 2.0</h1>
-    <p>Take any text, click one button, and make it easy to understand – right in your browser.</p>
-  </header>
+  <h1>Simplify, Instantly.</h1>
+  <h2>The Chrome Extension that explains anything like you're five. Just right-click, simplify, done.</h2>
+  <a href="https://chrome.google.com/webstore" target="_blank"><button class="cta">Install Now</button></a>
 
-  <section>
+  <section class="features">
     <div class="feature">
-      <h2>🔍 What It Does</h2>
-      <p>Simplify 2.0 is a Chrome Extension that lets you select any block of text on a page, click a button, and get a simplified version like you're 5 years old – all without switching tabs.</p>
+      <h3>🧠 Smart Simplification</h3>
+      <p>Powered by GPT-3.5, Simplify breaks down even the most complex concepts with just a click.</p>
     </div>
-
     <div class="feature">
-      <h2>✨ Features</h2>
-      <ul>
-        <li>Copy-to-clipboard</li>
-        <li>Right-click to simplify selected text</li>
-        <li>Polished UI with dark mode</li>
-        <li>Local history of simplified content</li>
-        <li>GPT-powered with customizable tones</li>
-      </ul>
+      <h3>⚡ Lightning Fast</h3>
+      <p>No need to copy-paste. Highlight text, right-click, and simplify instantly without leaving your tab.</p>
     </div>
-
     <div class="feature">
-      <h2>📊 Traction</h2>
-      <p>Launched to early testers on Reddit – 14+ unique users in the first 10 hours. OpenAI analytics confirm healthy request activity and usage.</p>
-    </div>
-
-    <div class="feature">
-      <h2>💰 What's Included</h2>
-      <ul>
-        <li>All source code + obfuscated API usage</li>
-        <li>Installation-ready ZIP file</li>
-        <li>Documentation for publishing or modifying</li>
-        <li>Bonus: domain ownership (optional)</li>
-      </ul>
-    </div>
-
-    <div class="cta">
-      <a href="#contact">🔗 Contact to Buy or Inquire</a>
+      <h3>🌙 Night Mode Ready</h3>
+      <p>Dark mode support out of the box for your midnight study sessions and late-night rabbit holes.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Simplify 2.0 – Built for instant clarity.
+    &copy; 2025 Simplify Extension by Jacob Rickert. Made with 💻 + ☕ in Texas.
   </footer>
 </body>
 </html>
