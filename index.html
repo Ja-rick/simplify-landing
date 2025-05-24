@@ -3,123 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simplify Extension</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <title>Explainify | Simplify Anything</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6ff;
+      color: #333;
     }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to bottom, #111827, #1f2937);
-      color: #f9fafb;
+    header {
+      background-color: #fff;
+      border-bottom: 2px solid #f5d76e;
+      padding: 1rem 2rem;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #f5d76e;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .main-nav a:hover {
+      background-color: #fff6d4;
+      border-color: #f5d76e;
+    }
+
+    .chunk {
+      height: 30vh;
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      color: #10b981;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: #d1d5db;
-    }
-
-    .cta {
-      background-color: #10b981;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      border-radius: 10px;
-      color: #111827;
-      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: bold;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
     }
 
-    .cta:hover {
-      background-color: #059669;
+    .chunk:nth-child(odd) {
+      background-color: #fef7dd;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      margin-top: 4rem;
-      max-width: 1000px;
+    .chunk:nth-child(even) {
+      background-color: #fff;
     }
 
-    .feature {
-      background-color: #1f2937;
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid #374151;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .feature h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #fbbf24;
-    }
-
-    .feature p {
-      font-size: 0.95rem;
-      color: #e5e7eb;
-    }
-
-    footer {
-      margin-top: 5rem;
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-
-    @media (max-width: 768px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
+    .download {
+      background-color: #f5d76e;
+      color: #000;
+      text-align: center;
+      padding: 4rem 2rem;
+      font-size: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>Simplify, Instantly.</h1>
-  <h2>The Chrome Extension that explains anything like you're five. Just right-click, simplify, done.</h2>
-  <a href="https://chrome.google.com/webstore" target="_blank"><button class="cta">Install Now</button></a>
+  <header>
+    <h1>Explainify</h1>
+    <nav class="main-nav">
+      <a href="#demo">Demo</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section class="features">
-    <div class="feature">
-      <h3>🧠 Smart Simplification</h3>
-      <p>Powered by GPT-3.5, Simplify breaks down even the most complex concepts with just a click.</p>
-    </div>
-    <div class="feature">
-      <h3>⚡ Lightning Fast</h3>
-      <p>No need to copy-paste. Highlight text, right-click, and simplify instantly without leaving your tab.</p>
-    </div>
-    <div class="feature">
-      <h3>🌙 Night Mode Ready</h3>
-      <p>Dark mode support out of the box for your midnight study sessions and late-night rabbit holes.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Simplify Extension by Jacob Rickert. Made with 💻 + ☕ in Texas.
-  </footer>
+  <div id="demo" class="chunk">Demo</div>
+  <div id="about" class="chunk">About This Product</div>
+  <div id="contact" class="chunk">Contact</div>
+  <div class="download" id="download">Download Extension</div>
 </body>
 </html>
