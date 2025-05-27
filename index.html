@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Explainify - Simplify Smarter</title>
+  <title>Simplify - Simplify Smarter</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fefefe;
+      background-color: #76c3d7;
       color: #222;
     }
 
@@ -19,6 +19,8 @@
       padding: 20px 40px;
       background-color: #fff;
       border-bottom: 1px solid #f1c40f;
+      z-index: 3;
+      position: relative;
     }
 
     .logo {
@@ -40,6 +42,8 @@
       align-items: center;
       text-align: center;
       padding: 40px;
+      position: relative;
+      z-index: 2;
     }
 
     .three-boxes {
@@ -72,31 +76,70 @@
       font-size: 1.5rem;
       font-weight: bold;
       color: #222;
+      border-radius: 12px;
+    }
+
+    /* Background image + overlay */
+    .background-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('icon.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5); /* light overlay */
+      z-index: 1;
     }
   </style>
 </head>
 <body>
+  <div class="background-wrapper"></div>
+  <div class="background-overlay"></div>
+
   <header>
-    <div class="logo">Explainify</div>
+    <div class="logo">Simplify</div>
     <nav>
-      <a href="#demo">Demo</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <a href="#demo">Demo</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#privacy" style="color: #888; font-size: 0.9rem;">Privacy Policy</a>
+</nav>
+</header>
 
-  <main class="main-section">
-    <div style="width: 100%; max-width: 1000px;">
-      <div class="three-boxes">
-        <div class="box" id="demo">Demo</div>
-        <div class="box" id="about">About This Product</div>
-        <div class="box" id="contact">Contact</div>
-      </div>
-
-      <div class="download-section">
-        Download Extension
-      </div>
+<main class="main-section">
+  <div style="width: 100%; max-width: 1000px;">
+    <div class="three-boxes">
+      <div class="box" id="demo">Demo</div>
+      <div class="box" id="about">About This Product</div>
+      <div class="box" id="contact">Contact</div>
     </div>
-  </main>
+
+    <div class="download-section">
+      Download Extension
+    </div>
+
+    <section id="privacy" style="margin-top: 40px; background: #fffbe6; padding: 30px 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">Privacy Policy</h2>
+      <p style="margin: 10px 0;">
+        <strong>Simplify 2.0</strong> does not collect or store any personally identifiable information. The extension only sends selected text to an external API in order to simplify it.
+      </p>
+      <p style="margin: 10px 0;">
+        This data is not stored or shared with any third parties. API usage is monitored solely for billing and rate-limiting purposes. No user identity, activity, or browsing history is recorded.
+      </p>
+    </section>
+  </div>
+</main>
 </body>
 </html>
