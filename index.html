@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simplify - Simplify Smarter</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simplify - Simplify Smarter</title>
+<style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #76c3d7;
       color: #222;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -77,9 +79,9 @@
       font-weight: bold;
       color: #222;
       border-radius: 12px;
+      margin-bottom: 200px;
     }
 
-    /* Background image + overlay */
     .background-wrapper {
       position: fixed;
       top: 0;
@@ -99,47 +101,87 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.5); /* light overlay */
+      background-color: rgba(255, 255, 255, 0.5);
       z-index: 1;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+      margin-bottom: 100px;
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
 <body>
-  <div class="background-wrapper"></div>
-  <div class="background-overlay"></div>
-
-  <header>
-    <div class="logo">Simplify</div>
-    <nav>
-  <a href="#demo">Demo</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <a href="#privacy" style="color: #888; font-size: 0.9rem;">Privacy Policy</a>
+<div class="background-wrapper"></div>
+<div class="background-overlay"></div>
+<header>
+<div class="logo">Simplify</div>
+<nav>
+<a href="#demo-section">Demo</a>
+<a href="#about-section">About</a>
+<a href="#contact-section">Contact</a>
+<a href="#privacy" style="color: #888; font-size: 0.9rem;">Privacy Policy</a>
 </nav>
 </header>
-
 <main class="main-section">
-  <div style="width: 100%; max-width: 1000px;">
-    <div class="three-boxes">
-      <div class="box" id="demo">Demo</div>
-      <div class="box" id="about">About This Product</div>
-      <div class="box" id="contact">Contact</div>
-    </div>
+<div style="width: 100%; max-width: 1000px;">
+<div class="three-boxes">
+<div class="box" onclick="document.getElementById('demo-section').scrollIntoView({ behavior: 'smooth' })">Demo</div>
+<div class="box" onclick="document.getElementById('about-section').scrollIntoView({ behavior: 'smooth' })">About This Product</div>
+<div class="box" onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })">Contact</div>
+</div>
+<div class="download-section">
+        Download Extension
+      </div>
+<!-- Spacer below download -->
+<div style="height: 100px;"></div>
+<!-- Demo Section -->
+<section id="demo-section">
+<h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">Demo</h2>
+<p>Here’s how Simplify works in real-time:</p>
+<ul>
+<li>Select any block of text on a website</li>
+<li>Click the Simplify extension icon</li>
+<li>Instantly receive a simplified version in a pop-up</li>
+</ul>
+<p><strong>Interactive Walkthrough:</strong></p>
+<img alt="Simplify 2.0 4-step demo" src="simplify_extension_4step_GRID_ONLY.png" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); margin-top: 20px;"/>
+<p style="margin-top: 40px;"><strong>Watch the Demo Video:</strong></p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px;">
+<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/PLACEHOLDER" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+</section>
+<!-- About Section -->
 
-    <div class="download-section">
-      Download Extension
-    </div>
+<section id="about-section">
+<h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">About This Product</h2>
+<p>Simplify is a Chrome extension designed to take complicated language and instantly break it down into simpler, easier-to-read text using AI.</p>
+<p>Perfect for students, ADHD users, ESL readers, and anyone who doesn’t have time to decipher walls of text.</p>
+<hr style="margin: 30px 0; border: none; height: 1px; background-color: #ccc;"/>
+<h3 style="font-size: 1.2rem; margin-bottom: 10px;">What is Simplify?</h3>
+<p><strong>Simplify</strong> is a browser extension built for <em>everyone</em> — whether you're a student knee-deep in research, a busy professional juggling too much, or just someone curious and hungry to learn.</p>
+<p>With just one click, Simplify takes any block of text on any website and breaks it down into a clean, readable summary. No fluff, no confusion — just quick comprehension.</p>
+<p>Whether you're skimming legal docs, decoding Reddit threads, or trying to understand a complex concept, Simplify makes essential reading <strong>fast, clear, and optimized</strong>.</p>
+</section>
 
-    <section id="privacy" style="margin-top: 40px; background: #fffbe6; padding: 30px 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
-      <h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">Privacy Policy</h2>
-      <p style="margin: 10px 0;">
-        <strong>Simplify 2.0</strong> does not collect or store any personally identifiable information. The extension only sends selected text to an external API in order to simplify it.
-      </p>
-      <p style="margin: 10px 0;">
-        This data is not stored or shared with any third parties. API usage is monitored solely for billing and rate-limiting purposes. No user identity, activity, or browsing history is recorded.
-      </p>
-    </section>
-  </div>
+<!-- Contact Section -->
+<section id="contact-section">
+<h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">Contact</h2>
+<p>Have feedback or want to collaborate?</p>
+<p>Email: <a href="mailto:Jarickert05@gmail.com">Jarickert05@gmail.com</a></p>
+<p>Twitter/X: <a href="https://twitter.com/Ja_ric05" target="_blank">@Ja_ric05</a></p>
+</section>
+<!-- Privacy Policy Section -->
+<section id="privacy">
+<h2 style="color: #f1c40f; font-size: 1.4rem; margin-bottom: 10px;">Privacy Policy</h2>
+<p><strong>Simplify</strong> does not collect or store any personally identifiable information. The extension only sends selected text to an external API in order to simplify it.</p>
+<p>This data is not stored or shared with any third parties. API usage is monitored solely for billing and rate-limiting purposes. No user identity, activity, or browsing history is recorded.</p>
+</section>
+</div>
 </main>
 </body>
 </html>
